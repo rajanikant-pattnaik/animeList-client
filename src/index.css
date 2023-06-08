@@ -76,7 +76,7 @@ button :hover{
   /* border: 2px solid red; */
   text-align: center;
   border-radius: 25px;
-  background-color: black;
+  background-color: #303030;
   color: white;
 }
 .anime-card img {
