@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #36454f;
+  background: #202020;
 }
 .app {
   width: 100%;
@@ -11,10 +11,10 @@ body {
 }
 
 .navbar {
-  background-color: brown;
+  background-color: black;
   display: flex;
   color: white;
-  height: 50px;
+  height: 75px;
   justify-content: space-between;
 }
 .navbar ul {
@@ -28,6 +28,29 @@ body {
 .navbar-search {
   padding-top: 20px;
   display: flex;
+}
+.navbar-search input{
+  height: 25px;
+  width: 300px;
+  margin-right: 25px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 25px;
+  color: white;
+}
+button{
+  height: 32px;
+  width: 65px;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+button :hover{
+  background: white;
+  color: black;
 }
 .login-card {
   width: 100px;
@@ -49,16 +72,17 @@ body {
 .anime-card {
   margin: 10px;
   width: 300px;
-  height: 450px;
-  border: 2px solid red;
+  height: 500px;
+  /* border: 2px solid red; */
   text-align: center;
   border-radius: 25px;
-  background-color: rgb(199, 137, 137);
+  background-color: black;
+  color: white;
 }
 .anime-card img {
   margin-top: 6px;
 }
-.anime-card span {
+.genres span {
   margin: 5px;
   border-radius: 20px;
   padding: 5px;
@@ -72,6 +96,7 @@ body {
 }
 .genres {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .anime-card h4 {
@@ -80,8 +105,29 @@ body {
 .anime-card-synopsis {
   margin-top: -15px;
 }
+.anime-card button{
+  width: 100px;
+}
+button:hover{
+  background: white;
+  color: black;
+}
+.animePage-data{
+  color: white;
+}
 .empty {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.anime-content{
+  display: flex;
+}
+
+.animePage-none{
+  display: flex;
+  height: 100vh;
   justify-content: center;
   align-items: center;
 }
