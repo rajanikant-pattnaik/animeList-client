@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../contextApi/UserContext";
 
 
 const NavBar = () => {
   const [searchTerm, setsearchTerm] = useState("");
+  const {user}=useContext(UserContext);
   const navigate=useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,7 +37,7 @@ const NavBar = () => {
           <button className="navbar-search-btn" onClick={handleSubmit}>
             search
           </button>
-          <div onClick={()=>navigate('/login')}>Account</div>
+          <div onClick={()=>navigate('/login')}>{user===undefined?"no user":user.name}</div>
         </div>
           
       </nav>

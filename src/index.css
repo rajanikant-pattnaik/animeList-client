@@ -122,8 +122,10 @@ button:hover{
 }
 .empty {
   display: flex;
+  height: 100vh;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .anime-content{
@@ -150,4 +152,12 @@ button:hover{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.login-page{
+  color: white;
+}
+
+.login-card label{
+  color: white;
 }

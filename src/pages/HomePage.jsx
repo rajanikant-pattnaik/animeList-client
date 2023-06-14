@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import NavBar from '../components/NavBar'
 import {animeSearch} from '../constant/FetchData'
 import AnimeCard from '../components/AnimeCard'
+
 const HomePage = () => {
   const [animeData, setAnimeData] = useState([])
   useEffect(() => {
@@ -12,6 +13,7 @@ const HomePage = () => {
     }
     fetchData();
  },[])
+//  console.log(user);
   return (
    <>
      <NavBar/>
