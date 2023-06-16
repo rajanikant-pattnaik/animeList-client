@@ -23,7 +23,7 @@ const NavBar = () => {
         <div className="navbar-list">
           <ul>
             <li onClick={()=>navigate('/')}>Home</li>
-            <li>History</li>
+            <li onClick={()=>navigate('/history')}>History</li>
           </ul>
         </div>
         <div className="navbar-search">

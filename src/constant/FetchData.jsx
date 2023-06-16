@@ -1,7 +1,7 @@
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key':process.env.REACT_APP_API_KEY,
+		'X-RapidAPI-Key':'96dc3bc4c7msh5a2e8330accf78ap1d0c9djsna783b8ed5f34',
 		'X-RapidAPI-Host': 'anime-db.p.rapidapi.com'
 	}
 };

@@ -7,6 +7,7 @@ import AnimePage from './pages/AnimePage';
 import { UserContext } from './contextApi/UserContext';
 import { useEffect, useState } from 'react';
 import RegisterPage from './pages/RegisterPage';
+import HistoryPage from './pages/HistoryPage';
 
 function App() {
   const [user, setuser] = useState();
@@ -23,6 +24,7 @@ function App() {
     <BrowserRouter>
      <Routes>
        <Route path='/' element={<HomePage/>}/>
+       <Route path='/history' element={<HistoryPage/>}/>
        <Route path='/search/:searchTerm' element={<SearchPage/>}/>
        <Route path='/login' element={<LoginPage/>}/>
        <Route path='/register' element={<RegisterPage/>}/>
