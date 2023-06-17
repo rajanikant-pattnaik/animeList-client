@@ -13,7 +13,6 @@ const HomePage = () => {
     }
     fetchData();
  },[])
-//  console.log(user);
   return (
    <>
      <NavBar/>

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const HistoryCard = ({
-  anime: { _id, title,image },
+  anime: { _id, title,image,animeId },
 }) => {
   const navigate=useNavigate();
   
@@ -22,7 +22,7 @@ const HistoryCard = ({
        direct();
     };
     const direct=()=>{
-      navigate(`/search/by_id/${_id}`);
+      navigate(`/search/by_id/${animeId}`);
     }
   return (
     <div className="anime-card" key={_id}>

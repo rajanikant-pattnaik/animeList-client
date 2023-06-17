@@ -7,18 +7,18 @@ const AnimeCard = ({
   anime: { _id, title, synopsis, link, genres, image },
 }) => {
   const navigate = useNavigate();
-  const { user } = useContext(UserContext);
-  const isUser = user === undefined ? false : true;
-  const history = isUser
+  const { user} = useContext(UserContext);
+
+  const history = user===undefined
     ? ""
     : {
-        userid: isUser === undefined ? "" : user._id,
+        userid: user === undefined ? "" : user._id,
         animeId: _id,
         title: title,
         image: image,
       };
   const handleSubmit = async (e) => {
-    if (isUser) {
+    if (user!==undefined) {
       try {
         console.log(history);
         await axios.post("/history/new", history);
@@ -37,9 +37,9 @@ const AnimeCard = ({
     <div className="anime-card" key={_id}>
       <img src={image} alt="anime-img" />
       <div className="genres">
-        {genres.map((genre) => (
+        {genres===null?'':(genres.map((genre) => (
           <span>{genre}</span>
-        ))}
+        )))}
       </div>
       <h4>{title}</h4>
       <p className="anime-card-synopsis">{synopsis.slice(0, 100)}....</p>
