@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 // import { UserContext } from '../contextApi/UserContext';
-// import axios from "axios";
+import axios from "axios";
 
 
 const HistoryCard = ({
@@ -24,11 +24,20 @@ const HistoryCard = ({
     const direct=()=>{
       navigate(`/search/by_id/${animeId}`);
     }
+    const handleDelete=async()=>{
+      try {
+        await axios.post('/history/delete',{_id})
+        window.location.reload();
+      } catch (error) {
+        console.log(error);
+      }
+    }
   return (
     <div className="anime-card" key={_id}>
       <img src={image} alt="anime-img" />
        <h4>{title}</h4>
        <button onClick={handleSubmit}>read more</button>
+       <button onClick={handleDelete}>Delete</button>
     </div>
   );
 };
