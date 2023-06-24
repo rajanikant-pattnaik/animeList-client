@@ -17,6 +17,12 @@ const NavBar = () => {
     }
 
   };
+  const removeUser=(e)=>{
+    e.preventDefault();
+    if(user===undefined)return;
+    localStorage.removeItem('user');
+    navigate('/login')
+  }
   return (
     <>
       <nav className={`navbar`}>
@@ -37,7 +43,7 @@ const NavBar = () => {
           <button className="navbar-search-btn" onClick={handleSubmit}>
             search
           </button>
-          <div onClick={()=>navigate('/login')}>{user===undefined?"no user":user.name}</div>
+          <div onClick={removeUser}>{user===undefined?"no user":user.name}</div>
         </div>
           
       </nav>
