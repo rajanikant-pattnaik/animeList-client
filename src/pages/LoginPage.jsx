@@ -22,7 +22,7 @@ const LoginPage = () => {
     const {data}=await axios.post("/users/login",form);
     localStorage.setItem(
       "user",
-      JSON.stringify({ ...data.curruser, password: "" })
+      JSON.stringify({...data.curruser})
     );
     setuser({...data.curruser})
     navigate("/");
